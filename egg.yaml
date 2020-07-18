@@ -1,14 +1,11 @@
 name: serve
-description: A super simple file server
-version: 1.0.0
+description: A super simple Deno file server
+version: 1.0.1
 repository: https://github.com/maximousblk/serve
 stable: true
 unlisted: false
-fmt: true
-entry: ./mod.ts
+entry: ./serve.js
 files:
-  - ./mod.ts
-  - ./deps.ts
-  - ./src/**/*
+  - ./serve.js
   - ./README.md
   - ./LICENSE

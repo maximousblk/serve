@@ -12,7 +12,6 @@ import {
 } from "./deps.ts";
 
 // utilities
-import html from "./src/utils/html.ts";
 import { EntryInfo, FileServerArgs } from "./src/utils/types.ts";
 
 // pages
