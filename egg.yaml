@@ -1,0 +1,14 @@
+name: serve
+description: A super simple file server
+version: 1.0.0
+repository: https://github.com/maximousblk/serve
+stable: true
+unlisted: false
+fmt: true
+entry: ./mod.ts
+files:
+  - ./mod.ts
+  - ./deps.ts
+  - ./src/**/*
+  - ./README.md
+  - ./LICENSE
