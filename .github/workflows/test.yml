@@ -22,7 +22,7 @@ jobs:
       uses: denolib/setup-deno@v2
 
     - name: Run tests
-      run: deno cache mod.ts
+      run: deno run mod.ts -h
 
   nightly:
     name: Deno Nightly
@@ -42,4 +42,4 @@ jobs:
         deno-version: nightly
 
     - name: Run tests
-      run: deno-nightly cache mod.ts
+      run: deno-nightly run mod.ts -h

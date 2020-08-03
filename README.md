@@ -4,6 +4,8 @@ A neat interface for directory listing and fileserving over http
 
 [![nest badge](https://nest.land/badge-large.svg)](https://nest.land/package/serve)
 
+<br/>
+
 ![preview](https://user-images.githubusercontent.com/28438021/87860837-56e24680-c95e-11ea-99fe-62d2301e0e80.png)
 
 ## Usage
@@ -13,13 +15,13 @@ A neat interface for directory listing and fileserving over http
 The quickest way to get started is to just run the following command in your project's directory.
 
 ```sh
-deno run --allow-read --allow-net https://x.nest.land/serve@1.0.1/serve.js
+deno run --allow-read --allow-net https://x.nest.land/serve@1.0.3/mod.ts
 ```
 
 If you prefer, you can also install `serve` globally using `deno install`:
 
 ```sh
-deno install --allow-read --allow-net https://x.nest.land/serve@1.0.1/serve.js
+deno install --allow-read --allow-net -n serve https://x.nest.land/serve@1.0.3/mod.ts
 ```
 
 Once that's done, you can run this command inside your project's directory...
