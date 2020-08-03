@@ -4,7 +4,7 @@ export interface EntryInfo {
   type: string;
 }
 
-export interface FileServerArgs {
+export interface Args {
   _: string[];
   // -p --port
   p: number;
