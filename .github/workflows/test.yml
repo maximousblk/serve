@@ -42,4 +42,4 @@ jobs:
         deno-version: nightly
 
     - name: Run tests
-      run: deno-nightly run --allow-read --allow-net mod.ts -h
+      run: deno run --allow-read --allow-net mod.ts -h
