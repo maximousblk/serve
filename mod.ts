@@ -1,5 +1,5 @@
 import { parse } from "./deps.ts";
-import { Args } from "./src/utils/types.ts";
+import type { Args } from "./src/utils/types.ts";
 import serve from "./src/utils/server.ts";
 
 const args = parse(Deno.args) as Args;

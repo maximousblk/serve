@@ -1,7 +1,7 @@
-export default function html(
+export default (
   strings: TemplateStringsArray,
   ...values: unknown[]
-): string {
+): string => {
   const l = strings.length - 1;
   let html = "";
 
@@ -15,4 +15,4 @@ export default function html(
   }
   html += strings[l];
   return html;
-}
+};

@@ -1,16 +1,9 @@
 // deps
-import {
-  listenAndServe,
-  posix,
-  extname,
-  ServerRequest,
-  assert,
-  Response,
-  parse,
-} from "../../deps.ts";
+import { listenAndServe, posix, extname, assert, parse } from "../../deps.ts";
 
 // types
-import { EntryInfo, Args } from "./types.ts";
+import type { EntryInfo, Args } from "./types.ts";
+import type { ServerRequest, Response } from "../../deps.ts";
 
 // pages
 import errPage from "../pages/err.ts";
@@ -50,13 +43,13 @@ function setCORS(res: Response): void {
   res.headers.append("access-control-allow-origin", "*");
   res.headers.append(
     "access-control-allow-headers",
-    "Origin, X-Requested-With, Content-Type, Accept, Range",
+    "Origin, X-Requested-With, Content-Type, Accept, Range"
   );
 }
 
 async function serveFile(
   req: ServerRequest,
-  filePath: string,
+  filePath: string
 ): Promise<Response> {
   const [file, fileInfo] = await Promise.all([
     Deno.open(filePath),
@@ -81,7 +74,7 @@ async function serveFile(
 // TODO: simplify this after deno.stat and deno.readDir are fixed
 async function serveDir(
   req: ServerRequest,
-  dirPath: string,
+  dirPath: string
 ): Promise<Response> {
   const dirUrl = `/${posix.relative(target, dirPath)}`;
   const listEntry: EntryInfo[] = [];
@@ -185,7 +178,7 @@ export default function serve() {
           console.error(e.message);
         }
       }
-    },
+    }
   );
   console.log(`\n\tServing on http://${addr}\n`);
 }

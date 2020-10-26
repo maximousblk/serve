@@ -1,10 +1,10 @@
-export interface EntryInfo {
+export type EntryInfo = {
   url: string;
   name: string;
   type: string;
 }
 
-export interface Args {
+export type Args = {
   _: string[];
   // -p --port
   p: number;

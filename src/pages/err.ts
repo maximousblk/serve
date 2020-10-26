@@ -1,4 +1,4 @@
-export default function errPage(error: string, message: string) {
+export default (error: string, message: string): string => {
   return `
     <!DOCTYPE html>
 
@@ -120,4 +120,4 @@ export default function errPage(error: string, message: string) {
       </main>
     </body>
     `;
-}
+};
