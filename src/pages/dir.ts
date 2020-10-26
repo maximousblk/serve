@@ -175,22 +175,26 @@ export default (dirname: string, entries: EntryInfo[]): string => {
             <li>
               <a href="../" title="parent directory" class="folder">..</a>
             </li>
-            ${entries.map(
-              (entry) =>
-                html`
+            ${
+    entries.map(
+      (entry) =>
+        html`
                   <li>
                     <a
                       href="${entry.url}"
                       title="${entry.name}"
-                      class="${entry.type} ${extname(entry.url).replace(
-                        ".",
-                        ""
-                      )}"
+                      class="${entry.type} ${
+          extname(entry.url).replace(
+            ".",
+            "",
+          )
+        }"
                       >${entry.name}</a
                     >
                   </li>
-                `
-            )}
+                `,
+    )
+  }
           </ul>
         </main>
       </body>

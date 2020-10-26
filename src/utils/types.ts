@@ -2,7 +2,7 @@ export type EntryInfo = {
   url: string;
   name: string;
   type: string;
-}
+};
 
 export type Args = {
   _: string[];
@@ -19,4 +19,4 @@ export type Args = {
   // -q --quite
   q: boolean;
   quite: boolean;
-}
+};
