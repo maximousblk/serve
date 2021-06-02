@@ -141,7 +141,7 @@ function serverLog(req: ServerRequest, res: Response): void {
 }
 
 export default function serve() {
-  const addr = `localhost:${args.port ?? args.p ?? 4507}`;
+  const addr = `${args.host ?? args.H ?? 'localhost'}:${args.port ?? args.p ?? 4507}`;
   listenAndServe(
     addr,
     async (req): Promise<void> => {
