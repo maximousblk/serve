@@ -17,7 +17,8 @@ USAGE:
 
 OPTIONS:
   -h, --help          Prints help information
-  -p, --port <PORT>   Set port
+  -H, --host <HOST>   Set the host to listen on (default: localhost)
+  -p, --port <PORT>   Set port (default: 4507)
   -q, --quite         Disable logs
   --verbose           More verbose logging
   --cors              Enable CORS via the "Access-Control-Allow-Origin" header
