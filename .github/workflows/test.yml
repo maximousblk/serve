@@ -17,15 +17,15 @@ jobs:
     steps:
     - name: Setup repo
       uses: actions/checkout@v2
-      
+
     - name: Setup Deno
-      uses: denolib/setup-deno@v2
+      uses: maximousblk/setup-deno@v1
 
     - name: Run tests
       run: deno run --allow-read --allow-net mod.ts -h
 
   nightly:
-    name: Deno Nightly
+    name: Deno Canary
     runs-on: ${{ matrix.os }}
     timeout-minutes: 10
     strategy:
@@ -35,11 +35,11 @@ jobs:
     steps:
     - name: Setup repo
       uses: actions/checkout@v2
-      
+
     - name: Setup Deno
-      uses: denolib/setup-deno@master
+      uses: maximousblk/setup-deno@v1
       with:
-        deno-version: nightly
+        deno-version: canary
 
     - name: Run tests
       run: deno run --allow-read --allow-net mod.ts -h
