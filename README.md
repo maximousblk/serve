@@ -1,3 +1,5 @@
+> **[DEPRECATED]** use [`std/http > file_server`](https://deno.land/std/http#file-server) instead.
+
 # serve
 
 A neat interface for directory listing and fileserving over http
